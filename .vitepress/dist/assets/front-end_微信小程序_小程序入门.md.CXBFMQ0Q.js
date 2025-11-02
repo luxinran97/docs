@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as n}from"./chunks/framework.BKhkn9_V.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"front-end/微信小程序/小程序入门.md","filePath":"front-end/微信小程序/小程序入门.md"}'),r={name:"front-end/微信小程序/小程序入门.md"};function a(o,s,_,c,d,f){return n(),t("div")}const m=e(r,[["render",a]]);export{i as __pageData,m as default};
