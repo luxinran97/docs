@@ -3,6 +3,7 @@ import { set_sidebar } from './util/auto-gen-siderbar'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/',
   title: "宝黄天",
   description: "A VitePress Site",
   themeConfig: {
