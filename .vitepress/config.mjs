@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "宝黄天 - 我的知识库",
   description: "基于分类优化的技术笔记",
+  base: '/',
 
   themeConfig: {
     nav: [
