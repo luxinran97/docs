@@ -2,9 +2,9 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "我的知识库",
+  title: "宝黄天 - 我的知识库", // 修改为更具体的名称
   description: "基于分类优化的技术笔记",
-  
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -16,7 +16,7 @@ export default defineConfig({
     sidebar: [
       {
         text: '🚀 前端开发',
-        collapsed: false, // 默认展开
+        collapsed: false,
         items: [
           { text: 'Vue.js 核心', link: '/frontend/vue-core' },
           { text: 'React 进阶', link: '/frontend/react-advanced' },
