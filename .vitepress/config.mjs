@@ -1,40 +1,60 @@
 import { defineConfig } from 'vitepress'
-import { set_sidebar } from './util/auto-gen-siderbar'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: '/docs/',
-  title: "宝黄天",
-  description: "A VitePress Site",
+  title: "我的知识库",
+  description: "基于分类优化的技术笔记",
+  
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    outline: [2, 6],
     nav: [
-      { text: 'Home', link: '/' },
-      { text: '前端', link: '/front-end/react/index' }
+      { text: '首页', link: '/' },
+      { text: '所有分类', link: '/guide/introduction' }
     ],
 
-    sidebar: [{
-        text: 'React',
-        items: [
-          { text: 'React', link: '/front-end/react/index' },
-          { text: '微信小程序', link: '/front-end/微信小程序/index' },
-        ]
-      }, 
+    // 优化点：侧边栏按分类进行分组
+    sidebar: [
       {
-        text: '微信小程序',
+        text: '🚀 前端开发',
+        collapsed: false, // 默认展开
         items: [
-          { text: '小程序入门', link: '/front-end/微信小程序/小程序入门' },
-          { text: '小程序入门', link: '/front-end/微信小程序/小程序入门' },
-      ]
-    }],
+          { text: 'Vue.js 核心', link: '/frontend/vue-core' },
+          { text: 'React 进阶', link: '/frontend/react-advanced' },
+          { text: 'CSS 技巧', link: '/frontend/css-tips' },
+          { text: '构建工具 (Vite/Webpack)', link: '/frontend/build-tools' }
+        ]
+      },
+      {
+        text: '⚙️ 后端架构',
+        collapsed: true,
+        items: [
+          { text: 'Node.js 实战', link: '/backend/nodejs' },
+          { text: 'Java Spring Boot', link: '/backend/spring-boot' },
+          { text: '数据库设计', link: '/backend/database' },
+          { text: 'API 设计规范', link: '/backend/api-design' }
+        ]
+      },
+      {
+        text: '🛠️ 运维与部署',
+        collapsed: true,
+        items: [
+          { text: 'Docker 容器化', link: '/devops/docker' },
+          { text: 'K8s 入门', link: '/devops/kubernetes' },
+          { text: 'CI/CD 流程', link: '/devops/cicd' }
+        ]
+      },
+      {
+        text: '📝 随笔与杂谈',
+        collapsed: true,
+        items: [
+          { text: '技术心得', link: '/others/thoughts' },
+          { text: '读书笔记', link: '/others/book-notes' }
+        ]
+      }
+    ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ],
-    footer: {
-      message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2025 lxr'
-    }
+      { icon: 'github', link: 'https://github.com/your-username/note' }
+    ]
   }
 })
