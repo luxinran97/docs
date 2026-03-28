@@ -2,56 +2,97 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "宝黄天 - 我的知识库", // 修改为更具体的名称
+  title: "宝黄天 - 我的知识库",
   description: "基于分类优化的技术笔记",
 
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '首页', link: '/' },
-      { text: '所有分类', link: '/guide/introduction' }
+      { text: '前端开发', link: '/front-end/' },
+      { text: '后端架构', link: '/backend/' },
+      { text: '运维部署', link: '/docs/devops/' }
     ],
 
-    // 优化点：侧边栏按分类进行分组
-    sidebar: [
-      {
-        text: '🚀 前端开发',
-        collapsed: false,
-        items: [
-          { text: 'Vue.js 核心', link: '/frontend/vue-core' },
-          { text: 'React 进阶', link: '/frontend/react-advanced' },
-          { text: 'CSS 技巧', link: '/frontend/css-tips' },
-          { text: '构建工具 (Vite/Webpack)', link: '/frontend/build-tools' }
-        ]
-      },
-      {
-        text: '⚙️ 后端架构',
-        collapsed: true,
-        items: [
-          { text: 'Node.js 实战', link: '/backend/nodejs' },
-          { text: 'Java Spring Boot', link: '/backend/spring-boot' },
-          { text: '数据库设计', link: '/backend/database' },
-          { text: 'API 设计规范', link: '/backend/api-design' }
-        ]
-      },
-      {
-        text: '🛠️ 运维与部署',
-        collapsed: true,
-        items: [
-          { text: 'Docker 容器化', link: '/devops/docker' },
-          { text: 'K8s 入门', link: '/devops/kubernetes' },
-          { text: 'CI/CD 流程', link: '/devops/cicd' }
-        ]
-      },
-      {
-        text: '📝 随笔与杂谈',
-        collapsed: true,
-        items: [
-          { text: '技术心得', link: '/others/thoughts' },
-          { text: '读书笔记', link: '/others/book-notes' }
-        ]
-      }
-    ],
+    sidebar: {
+      '/front-end/': [
+        {
+          text: '🚀 前端开发',
+          collapsed: false,
+          items: [
+            { text: '概览', link: '/front-end/' },
+            { text: 'React 学习', link: '/front-end/react/' },
+            { text: '微信小程序', link: '/front-end/微信小程序/' }
+          ]
+        }
+      ],
+      '/backend/': [
+        {
+          text: '⚙️ 后端架构',
+          collapsed: false,
+          items: [
+            { text: '概览', link: '/backend/' },
+            { 
+              text: 'Node.js 实战', 
+              link: '/backend/nodejs/'
+            },
+            { 
+              text: 'Koa 框架', 
+              link: '/backend/Koa/1-1 起步',
+              items: [
+                { text: '1-1起步', link: '/backend/Koa/1-1 起步' },
+                { text: '1-2路由匹配', link: '/backend/Koa/1-2 路由和控制器' }
+              ]
+            }
+          ]
+        }
+      ],
+      '/docs/devops/': [
+        {
+          text: '🛠️ 运维与部署',
+          collapsed: true,
+          items: [
+            { text: '概览', link: '/docs/devops/' }
+          ]
+        }
+      ],
+      '/': [
+        {
+          text: '🚀 前端开发',
+          collapsed: false,
+          items: [
+            { text: '概览', link: '/front-end/' },
+            { text: 'React 学习', link: '/front-end/react/' },
+            { text: '微信小程序', link: '/front-end/微信小程序/' }
+          ]
+        },
+        {
+          text: '⚙️ 后端架构',
+          collapsed: true,
+          items: [
+            { text: '概览', link: '/backend/' },
+            { text: 'Node.js 实战', link: '/backend/nodejs' }
+          ]
+        },
+        {
+          text: '🛠️ 运维与部署',
+          collapsed: true,
+          items: [
+            { text: '概览', link: '/docs/devops/' }
+          ]
+        },
+        {
+          text: '📝 随笔与杂谈',
+          collapsed: true,
+          items: [
+            { text: '技术心得', link: '/others/thoughts' },
+            { text: '读书笔记', link: '/others/book-notes' }
+          ]
+        }
+      ]
+    },
+
+    // 添加 home 配置以确保首页行为一致
+    home: '/',
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/your-username/note' }
