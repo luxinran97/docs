@@ -8,39 +8,41 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
-      { text: '前端开发', link: '/front-end/' },
-      { text: '后端架构', link: '/backend/' },
+      { text: '前端开发', link: '/docs/front-end/' },
+      { text: '后端架构', link: '/docs/backend/' },
       { text: '运维部署', link: '/docs/devops/' }
     ],
 
     sidebar: {
-      '/front-end/': [
+      '/docs/front-end/': [
         {
           text: '🚀 前端开发',
           collapsed: false,
           items: [
-            { text: '概览', link: '/front-end/' },
-            { text: 'React 学习', link: '/front-end/react/' },
-            { text: '微信小程序', link: '/front-end/微信小程序/' }
+            { text: '概览', link: '/docs/front-end/' },
+            { text: 'React 学习', link: '/docs/front-end/react/' },
+            { text: '微信小程序', link: '/docs/front-end/微信小程序/' }
           ]
         }
       ],
-      '/backend/': [
+      '/docs/backend/': [
         {
           text: '⚙️ 后端架构',
           collapsed: false,
           items: [
-            { text: '概览', link: '/backend/' },
+            { text: '概览', link: '/docs/backend/' },
             { 
               text: 'Node.js 实战', 
-              link: '/backend/nodejs/'
+              link: '/docs/backend/nodejs/'
             },
             { 
-              text: 'Koa 框架', 
-              link: '/backend/Koa/1-1 起步',
+              text: 'Egg 框架', 
+              link: '/docs/backend/Egg/',
               items: [
-                { text: '1-1起步', link: '/backend/Koa/1-1 起步' },
-                { text: '1-2路由匹配', link: '/backend/Koa/1-2 路由和控制器' }
+                { text: '1-1起步', link: '/docs/backend/Egg/1-1 起步' },
+                { text: '1-2路由匹配', link: '/docs/backend/Egg/1-2 路由和控制器' },
+                { text: '1-3静态资源插件', link: '/docs/backend/Egg/1-3 静态资源插件' }
+                
               ]
             }
           ]
@@ -60,17 +62,17 @@ export default defineConfig({
           text: '🚀 前端开发',
           collapsed: false,
           items: [
-            { text: '概览', link: '/front-end/' },
-            { text: 'React 学习', link: '/front-end/react/' },
-            { text: '微信小程序', link: '/front-end/微信小程序/' }
+            { text: '概览', link: '/docs/front-end/' },
+            { text: 'React 学习', link: '/docs/front-end/react/' },
+            { text: '微信小程序', link: '/docs/front-end/微信小程序/' }
           ]
         },
         {
           text: '⚙️ 后端架构',
           collapsed: true,
           items: [
-            { text: '概览', link: '/backend/' },
-            { text: 'Node.js 实战', link: '/backend/nodejs' }
+            { text: '概览', link: '/docs/backend/' },
+            { text: 'Node.js 实战', link: '/docs/backend/nodejs/' }
           ]
         },
         {

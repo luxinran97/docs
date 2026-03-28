@@ -11,4 +11,4 @@
 
 ## 快速开始
 
-建议从 [Node.js 实战](/backend/nodejs) 或 [Java Spring Boot](/backend/spring-boot) 开始阅读。
+建议从 [Node.js 实战](/docs/backend/nodejs) 或 [Java Spring Boot](/docs/backend/spring-boot) 开始阅读。
