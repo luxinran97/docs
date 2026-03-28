@@ -10,6 +10,6 @@
 
 ## 快速开始
 
-建议从 [Vue.js 核心](/frontend/vue-core) 开始阅读。
+建议从 [Vue.js 核心](/docs/frontend/vue-core.md) 开始阅读。
 
 > 💡 **提示**：点击左侧菜单即可展开查看该分类下的所有文章。

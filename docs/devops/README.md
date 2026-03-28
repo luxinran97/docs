@@ -10,4 +10,4 @@
 
 ## 快速开始
 
-建议从 [Docker 容器化](/devops/docker) 开始阅读。
+建议从 [Docker 容器化](/docs/guide/introduction) 开始阅读。

@@ -16,11 +16,11 @@
 
 ::: tip 🛠️ 运维与部署
 Docker, Kubernetes 及 CI/CD 自动化部署流程实战。
-[进入运维专区 →](/docs/devops/)
+[进入运维专区 →](/docs/devops/README.md)
 :::
 
 ---
 
 ## 📝 随笔与杂谈
-- [技术心得](/others/thoughts)
-- [读书笔记](/others/book-notes)
+- [技术心得](/docs/guide/introduction)
+- [读书笔记](/docs/guide/introduction)
